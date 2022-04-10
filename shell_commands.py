@@ -26,7 +26,7 @@ daniyar = VIPClient.objects.create(name="Daniyar", birth_date=date(1992, 8, 9), 
 
 all_employees = Employee.objects.all()
 print(all_employees)
-employees_with_passports = all_employees.filter(employee_id__in = Passport)
+employees_with_passports = all_employees.filter(Passport__inn__isnull = False, Passport__card_id__isnull = False )
 print(employees_with_passports)
 all_work_projects = WorkProject.objects.all()
 print(all_work_projects)
