@@ -8,7 +8,7 @@ from .forms import EmployeeForm
 
 @admin.display(description='experience_year')
 def get_experience_year(obj):
-    experience_year = date.today().year - experience_year.year
+    experience_year = date.today().year - obj.experience.year
     return experience_year
 
 def get_button(obj): 

@@ -18,7 +18,6 @@ class AbstractPerson(models.Model):
         return age
 
 
-
 class Employee(AbstractPerson):
     work_position = models.CharField(max_length=30)
     experience = models.DateField()
@@ -41,8 +40,6 @@ class Passport(models.Model):
     def save(self, *args, **kwargs):
         print(f'{self.employee.name} has been saved!')
         super().save(*args, **kwargs)
-
-
 
 
 class WorkProject(models.Model):
